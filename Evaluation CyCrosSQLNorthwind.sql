@@ -60,7 +60,8 @@ FROM customers
 JOIN orders ON orders.`CustomerID` = customers.`CustomerID`
 JOIN `order details` ON `order details`.`OrderID` = orders.`OrderID`
 GROUP BY customers.`CustomerID` 
-	HAVING CA > 30000;
+	HAVING CA > 30000
+ORDER BY CA DESC;
 
 
 /* 6 - Pays des clients chez Exotic Liquid 
